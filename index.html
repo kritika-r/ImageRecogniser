@@ -1,61 +1,46 @@
- 
 <html>
-  <head>
-    <title>Image recognition</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Family Face Recogniser</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
-    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
-   <link rel="stylesheet" href="style.css">
-  
-  </head>
-
-  <body>
-  <div class="container">
-    
-    <center>
-    <h1>Image Recogniser</h1>
-      <br><br>
-
-      <p style="font-size: 22px;">This app can recognise the following objects: </p>
-      <br>
-      <div class="objects_name">
-      <p>Bottle</p>
-      
-      <p>Diary</p>
-      
-      <p>Mask</p>
-      
-      <p>Pen</p>
-      
-      <p>Earphones</p>
-      </div>
-    <br>
-
-      <p id="wv">Webcam View </p>
-     <div id="cam">
-       
-     </div>
-      <br><br>
-       <div id="result"></div>
-      <br><br>
-       <button class="btn btn-primary glyphicon glyphicon-camera" onclick="takeASnapshot();"> Click</button>
-      <br><br>
-      <button class="btn btn-primary glyphicon glyphicon-search" onclick="checkSnapshot();"> Check</button>
-
-      <br><br>
-     <p class="heading"> Results:</p>
-      <p class="sub-heading" >Object :  </p>
-      <p class="sub-heading" >Accuracy :  </p>
-    </center>
-
-  </div>
-<script src="main.js"></script>
-
-  </body>
+   <link rel="stylesheet"  href="style.css">
+   <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+</head>
+    <body>
+   <center>
+       <h1>Family Face Recogniser</h1>
+       <br>
+       <div class="note">
+           <h4>This app can recognise the following people-</h4>
+           <br>
+           <p>Mother</p>
+           <p>Father</p>
+           <p>Brother</p>
+           <p>Sister</p>
+           
+           
+       </div>
+       <br>
+     <label>Webcam View</label>
+     <div id="cam"></div>
+     <br>
+     <div id="results"></div>
+     <br>
+     <button class="btn-dark" onclick="clickSnapshot();">Click Photo</button>
+     <br>
+     <br>
+     <button class="btn-dark" onclick="identifySnapshot();">Recognise</button>
+     <br>
+     <br>
+     <br>
+     <h5 style="font-size: 20px; font-weight: bold;color: black;"> Recognition Results</h5>
+     <p>Object: </p>
+     <p>Accuracy: </p>
+   </center>
+   <script src="main.js"></script>
+    </body>
 </html>
-
- 
